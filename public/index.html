@@ -8,7 +8,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>Express Server App</h1>
+        <div class="chat">
+            <ul>
+                <li v-for="message in messages">{{ message }}</li>
+            </ul>
+            <input type="text" v-model="message" v-on:keydown="send">
+        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.4/socket.io.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>
